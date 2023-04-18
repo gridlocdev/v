@@ -95,7 +95,7 @@ The builder contains a method which does this: `Builder.parse_imports`.
 If the module which is imported isn't parsed already,
 you have to collect it relatively from the main file.
 For this the `ast.File` contains a list of imports.
-Those imports needs to be found on disk.
+Those imports need to be found on disk.
 `.` is just replaced with separators in the relative location of the main file.
 Then all files from that directory are collected and parsed again like the previous steps explained.
 

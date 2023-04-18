@@ -7,7 +7,7 @@ cryptographic schemes over curve edwards25519, includes:
     with an arbitrary point, with the base point, etc.
 2.  Arithmetic functions dealing with scalars modulo the prime order L of the base point.
 
-This modules was port of Golang `edwards25519` library from [edwards25519](https://github.com/FiloSottile/edwards25519) to the V language.
+These modules are a port of the Golang `edwards25519` library from [edwards25519](https://github.com/FiloSottile/edwards25519) to the V language.
 
 
 About Edwards25519

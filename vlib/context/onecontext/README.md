@@ -21,8 +21,7 @@ fn (f Foo) get(ctx context.Context, bar Bar) ?Baz {
 
 Here, we receive another context provided by the service.
 
-Then, in the `get` implementation, we want for example to query a database and
-we must provide a context for that.
+Then, in the `get` implementation, we must provide a context (for example, querying a database). 
 
 Ideally, we would like to provide a merged context that would expire either:
 

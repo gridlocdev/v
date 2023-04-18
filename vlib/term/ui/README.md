@@ -71,7 +71,7 @@ See the `/examples/term.ui/` folder for more usage examples.
 - `window_title string` - sets the title of the terminal window.
     This may be changed later, by calling the `set_window_title()` method.
 - `reset []int = [1, 2, 3, 4, 6, 7, 8, 9, 11, 13, 14, 15, 19]` - a list of reset signals,
-    to setup handlers to cleanup the terminal state when they're received.
+    to set up handlers to clean up the terminal state when they're received.
     You should not need to change this, unless you know what you're doing.
 
 All of these fields may be omitted, in which case, the default value will be used.

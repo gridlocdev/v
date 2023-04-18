@@ -7,7 +7,7 @@
   - Write the output expected
   
 ### Notes
-Keep in mind, that the way V repl works for now, every non empty line
+Keep in mind, that the way V repl works for now, every non-empty line
 would cause a new recompilation of the entire repl content that was
 collected so far. 
 

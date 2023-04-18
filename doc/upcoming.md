@@ -30,7 +30,7 @@ atomic d := ...
 ```
 
 - `a` is declared as *constant* that can be passed to
-  other coroutines and read without limitations. However
+  other coroutines and read without limitations. However,
   it cannot be changed.
 - `b` can be accessed reading and writing but only from one
   coroutine. That coroutine *owns* the object. A `mut` variable can
@@ -58,7 +58,7 @@ atomic d := ...
   They are unlocked in the opposite order.
 - `d` can be passed to coroutines and accessed *concurrently*,
   too.<sup>3</sup> No lock is needed in this case, however
-  `atomic` variables can only be 32/64 bit integers (or pointers)
+  `atomic` variables can only be 32-bit or 64-bit integers (or pointers)
   and access is limited to a small set of predefined idioms that have
   native hardware support.
 
@@ -124,7 +124,7 @@ for the object when it is no longer needed.
 <sup>2</sup> For `shared` objects the compiler adds code for reference
 counting. Once the counter reaches 0 the object is automatically freed.  
 <sup>3</sup> Since an `atomic` variable is only a few bytes in size
-allocation would be an unnecessary overhead. Instead the compiler
+allocation would be an unnecessary overhead. Instead, the compiler
 creates a global.
 
 ### Compatibility
@@ -175,7 +175,7 @@ rlock c {
 
 In general the compiler will generate an error message when a `shared`
 object is accessed outside of any corresponding `lock`/`rlock`
-block. However in simple and obvious cases the necessary lock/unlock
+block. However, in simple and obvious cases the necessary lock/unlock
 can be generated automatically for `array`/`map` operations:
 
 ```v ignore

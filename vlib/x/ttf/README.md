@@ -120,7 +120,7 @@ This is the low level render that draw the text on a bitmap and save the bitmap 
 `.ppm` file.
 
 > **Note**
-> The render in this case is a raw rendering without any postfiltering or other processing.
+> The render in this case is a raw rendering without any post-filtering or other processing.
 
 Using the low level rendering you need to manage all the amenities like allocate and release
 memory and other tasks like calc the character dimensions.
@@ -134,7 +134,7 @@ enum Style {
 	raw
 }
 ```
-Use this level only if you want achieve particular result on text rendering.
+Use this level only if you want to achieve particular result on text rendering.
 
 ### draw_text_block
 Draw text block draw a justified and indented block of multiline text in the bitmap.
@@ -210,10 +210,10 @@ and use the following bitmap fields:
 It is possible to modify these parameters to obtain the desired effect on the text rendering.
 
 ## TTF Sokol render
-The sokol render use the  bitmap render to create the text and the `gg` functions to render
+The sokol render use the bitmap render to create the text and the `gg` functions to render
 the text to the screen.
 It is simpler to use in a `gg app` than the raw bitmap render.
-Each single text rendered need its own reder to be declared, after you can modify it.
+Each single text rendered need its own render to be declared, after you can modify it.
 Here a simple example of the usage:
 ```v oksyntax
 import gg

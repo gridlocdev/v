@@ -22,7 +22,7 @@ After all transitions are checked, and thus the state is changed, the client-spe
 
 ## Plot States and Transitions
 This module includes a tool for generating dot diagrams from .v source code,
-that defines a FSM. The tool is located in [fsm_graph.v](tools/fsm_graph.v).
+that defines an FSM. The tool is located in [fsm_graph.v](tools/fsm_graph.v).
 
 Here is an example of how to generate a .dot file with the graph and transitions:
 ```bash

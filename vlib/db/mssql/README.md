@@ -8,7 +8,7 @@
 		* Details: https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server
         * `msodbcsql17` and `unixodbc-dev` packages are needed
     * Windows Install:
-		* `odbc` lib is included in windows sdk for most of distributions,
+		* `odbc` lib is included in the Windows sdk for most distributions,
 			so there is no need to install it separately
 		* Details: https://docs.microsoft.com/en-us/sql/connect/odbc/microsoft-odbc-driver-for-sql-server
 

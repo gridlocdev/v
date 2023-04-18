@@ -1,6 +1,6 @@
 
 This projects demonstrates how v.mod lookup can be used so that 
-a project/module can be as selfcontained as possible.
+a project/module can be as self-contained as possible.
 
 The programs under bin/ can find the modules mod1, 
 because the project has a 'v.mod' file, so v module lookup for 

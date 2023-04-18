@@ -52,7 +52,7 @@ the generator must implement the `PRNG` interface. See `get_current_rng()` and `
 
 > **Note**
 > The global PRNG is not thread safe. It is recommended to use separate generators for
-> separate threads in multi-threaded applications.
+> separate threads in multithreaded applications.
 
 There are only a few extra functions that are defined only in this top-level `rand` module.
 Otherwise, there is feature parity between the generator functions and the top-level functions.

@@ -29,7 +29,7 @@ In the `v` repo there are many tests. The main types are:
 
 ## `_test.v` tests - these are the normal V test files.
 
-All `test_` functions in these files, will be ran automatically by
+All `test_` functions in these files will be run automatically by
 V's test framework.
 
 NB 1: You can run test files one by one, with:
@@ -177,7 +177,7 @@ This will check only the .vv files, whose paths match the given filter.
 
 ## `.github/workflows/ci.yml`
 
-This is a Github Actions configuration file, that runs various CI
+This is a GitHub Actions configuration file, that runs various CI
 tests in the main V repository, for example:
 
 * `v vet vlib/v` - run a style checker.

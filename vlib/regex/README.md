@@ -31,7 +31,7 @@ The main differences can be summarized in the following points:
   simple token, is a single character.
 
 - `|` **the OR operator acts on tokens,** for example `abc|ebc` is not
-  `abc` OR `ebc`. Instead it is evaluated like `ab`, followed by `c OR e`,
+  `abc` OR `ebc`. Instead, it is evaluated like `ab`, followed by `c OR e`,
   followed by `bc`, because the **token is the base element**,
   not the sequence of symbols.
   Note: **Two char classes with an `OR` in the middle is a syntax error.**
@@ -102,7 +102,7 @@ A meta-char can match different types of characters.
 - `\d` matches a digit `[0-9]`
 - `\D` matches a non digit
 - `\s` matches a space char, one of `[' ','\t','\n','\r','\v','\f']`
-- `\S` matches a non space char
+- `\S` matches a non-space char
 - `\a` matches only a lowercase char `[a-z]`
 - `\A` matches only an uppercase char `[A-Z]`
 
@@ -182,7 +182,7 @@ nested. Like all other tokens, groups can have a quantifier too.
 
 `(c(pa)+z ?)+` matches `cpaz cpapaz cpapapaz` or `cpapaz`
 
-Lets analyze this last case, first we have the group `#0`, that is the most
+Let's analyze this last case, first we have the group `#0`, that is the most
 outer round brackets `(...)+`. This group has a quantifier `+`, that say to
 match its content *at least one time*.
 

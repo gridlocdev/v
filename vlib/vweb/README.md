@@ -162,7 +162,7 @@ fn main() {
 ### Defining endpoints
 
 To add endpoints to your web server, you have to extend the `App` struct.
-For routing you can either use auto-mapping of function names or specify the path as an attribute.
+For routing, you can either use auto-mapping of function names or specify the path as an attribute.
 The function expects a response of the type `vweb.Result`.
 
 **Example:**
@@ -204,7 +204,7 @@ fn (mut app App) create_product() vweb.Result {
 
 Parameters are passed directly in endpoint route using colon sign `:` and received using the same
 name at function
-To pass a parameter to an endpoint, you simply define it inside an attribute, e. g.
+To pass a parameter to an endpoint, you simply define it inside an attribute, e.g.
 `['/hello/:user]`.
 After it is defined in the attribute, you have to add it as a function parameter.
 
@@ -270,7 +270,7 @@ executed when the url starts with the defined key.
 In the following example, if a user navigates to `/path/to/test` the middleware 
 is executed in the following order: `middleware_func`, `other_func`, `global_middleware`.
 The middleware is executed in the same order as they are defined and if any function in
-the chain returns `false` the propogation is stopped.
+the chain returns `false` the propagation is stopped.
 
 **Example:**
 ```v
@@ -335,11 +335,11 @@ pub fn (mut app App) check_auth () bool {
 	return true
 }
 ```
-For now you can only add 1 middleware to a route specific function via attributes.
+For now, you can only add 1 middleware to a route specific function via attributes.
 
 ### Redirect
 
-Used when you want be redirected to an url
+Used when you want to be redirected to a URL
 
 **Examples:**
 
@@ -392,8 +392,8 @@ pub fn (mut app App) not_found() vweb.Result {
 ```
 
 ### Controllers
-Controllers can be used to split up app logic so you are able to have one struct 
-per `"/"`.  E.g. a struct `Admin` for urls starting with `"/admin"` and a struct `Foo`
+Controllers can be used to split up app logic and enable routing to URL paths following
+`"/"`.  E.g. a struct `Admin` for urls starting with `"/admin"` and a struct `Foo`
 for urls starting with `"/foo"`
 
 **Example:**
@@ -656,7 +656,7 @@ pub fn (mut app App) before_request() {
 
 #### - add_header
 
-Adds an header to the response with key and val
+Adds a header to the response with key and val
 **Example:**
 
 ```v ignore
@@ -845,7 +845,7 @@ fn (mut app App) index() vweb.Result {
 }
 ```
 
-If you want to set the cookies's HttpOnly-status to false in order to make it  
+If you want to set the cookie's HttpOnly-status to false in order to make it  
  accessible to scripts on your site, you can do it like this:
 `app.set_csrf_cookie(csrf.HttpOnly{false})`
 If no argument is passed the value will be set to true by default.

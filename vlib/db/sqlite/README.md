@@ -21,7 +21,7 @@ library installed on your system.
 
 **Windows**:
 - Download the source zip from [SQLite Downloads](https://sqlite.org/download.html)
-- Create a new `sqlite` subfolder inside `v/thirdparty`
+- Create a new `sqlite` sub-folder inside `v/thirdparty`
 - Extract the zip into that folder
 
 # Performance Tips

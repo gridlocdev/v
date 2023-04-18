@@ -76,7 +76,7 @@ make
 # HINT: Using Windows? run make.bat in a cmd shell, or ./make.bat in PowerShell
 ```
 
-That should be it and you should find your V executable at `[path to V repo]/v`.
+That should be it, and you should find your V executable at `[path to V repo]/v`.
 `[path to V repo]` can be anywhere.
 
 (As in the hint above, on Windows `make` means running `make.bat`.)
@@ -224,7 +224,7 @@ The VS Code plugin provides built-in support for VLS.
 > If you encounter any problem, please create a new
 > [issue](https://github.com/vlang/vls/issues).
 
-The plugin for JetBrains IDE (IntelliJ, CLion, GoLand, etc) at the moment is
+The plugin for JetBrains IDE (IntelliJ, CLion, GoLand, etc.) at the moment is
 the best choice if you want a great V development experience.
 You can see all its features in
 [its documentation](https://plugins.jetbrains.com/plugin/20287-vlang/docs/syntax-highlighting.html).

@@ -483,7 +483,7 @@ any // similar to C's void* and Go's interface{}
 ```
 
 > **Note**
-> Unlike C and Go, `int` is always a 32 bit integer.
+> Unlike C and Go, `int` is always a 32-bit integer.
 
 There is an exception to the rule that all operators
 in V must have values of the same type on both sides. A small primitive type
@@ -655,7 +655,7 @@ To use a format specifier, follow this pattern:
   > There are only three cases where specifying a type is recommended:
 
 - format strings are parsed at compile time, so specifying a type can help detect errors then
-- format strings default to using lowercase letters for hex digits and the `e` in exponents. Use a
+- format strings default to using lowercase letters for hex digits and the `e` in exponents. Use an
   uppercase type to force the use of uppercase hex digits and an uppercase `E` in exponents.
 - format strings are the most convenient way to get hex, binary or octal strings from an integer.
 
@@ -920,7 +920,7 @@ mut a := []int{len: 10000, cap: 30000, init: 3}
 This creates an array of 10000 `int` elements that are all initialized with `3`. Memory
 space is reserved for 30000 elements. The parameters `len`, `cap` and `init` are optional;
 `len` defaults to `0` and `init` to the default initialization of the element type (`0`
-for numerical type, `''` for `string`, etc). The run time system makes sure that the
+for numerical type, `''` for `string`, etc.). The run time system makes sure that the
 capacity is not smaller than `len` (even if a smaller value is specified explicitly):
 
 ```v
@@ -2477,7 +2477,7 @@ Button{
 ```
 
 Unlike inheritance, you cannot type cast between structs and embedded structs
-(the embedding struct can also has its own fields, and it can also embed multiple structs).
+(the embedding struct can also have its own fields, and it can also embed multiple structs).
 
 If you need to access embedded structs directly, use an explicit reference like `button.Size`.
 
@@ -4015,7 +4015,7 @@ fn main() {
 // done
 ```
 
-Additionally for threads that return the same type, calling `wait()`
+Additionally, for threads that return the same type, calling `wait()`
 on the thread array will return all computed values.
 
 ```v
@@ -4040,11 +4040,11 @@ fn main() {
 
 Channels are the preferred way to communicate between threads. V's channels work basically like
 those in Go. You can push objects into a channel on one end and pop objects from the other end.
-Channels can be buffered or unbuffered and it is possible to `select` from multiple channels.
+Channels can be buffered or unbuffered, and it is possible to `select` from multiple channels.
 
 #### Syntax and Usage
 
-Channels have the type `chan objtype`. An optional buffer length can specified as the `cap` field
+Channels have the type `chan objtype`. An optional buffer length can be specified as the `cap` field
 in the declaration:
 
 ```v
@@ -4085,7 +4085,7 @@ y = <-ch2 // pop into existing variable
 ```
 
 A channel can be closed to indicate that no further objects can be pushed. Any attempt
-to do so will then result in a runtime panic (with the exception of `select` and
+to do so will then result in a runtime panic (except for `select` and
 `try_push()` - see below). Attempts to pop will return immediately if the
 associated channel has been closed and the buffer is empty. This situation can be
 handled using an `or {}` block (see [Handling options/results](#handling-optionsresults)).
@@ -4579,7 +4579,7 @@ be stored:
   stack grows and shrinks with the function call depth &ndash; so every called
   function has its stack segment that remains valid until the function returns.
   No freeing is necessary, however, this also means that a reference to a stack
-  object becomes invalid on function return. Furthermore stack space is
+  object becomes invalid on function return. Furthermore, stack space is
   limited (typically to a few Megabytes per thread).
 * The *heap* is a large memory area (typically some Gigabytes) that is administrated
   by the operating system. Heap objects are allocated and freed by special function
@@ -4626,7 +4626,7 @@ fn f() (RefStruct, &MyStruct) {
 ```
 
 Here `a` is stored on the stack since its address never leaves the function `f()`.
-However a reference to `b` is part of `e` which is returned. Also a reference to
+However, a reference to `b` is part of `e` which is returned. Also, a reference to
 `c` is returned. For this reason `b` and `c` will be heap allocated.
 
 Things become less obvious when a reference to an object is passed as function argument:
@@ -4657,7 +4657,7 @@ fn (mut a MyStruct) f(b &MyStruct) int {
 
 Here the call `q.f(&w)` passes references to `q` and `w` because `a` is
 `mut` and `b` is of type `&MyStruct` in `f()`'s declaration, so technically
-these references are leaving `main()`. However the *lifetime* of these
+these references are leaving `main()`. However, the *lifetime* of these
 references lies inside the scope of `main()` so `q` and `w` are allocated
 on the stack.
 
@@ -4914,7 +4914,7 @@ fn copy_all(dupes bool) {
 }
 ```
 
-By convention it is preferred that comments are written in *present tense*.
+By convention, it is preferred that comments are written in *present tense*.
 
 An overview of the module must be placed in the first comment right after the module's name.
 
@@ -4974,7 +4974,7 @@ and use `v shader` to compile them for all supported target platforms.
 v shader /path/to/project/dir/or/file.v
 ```
 
-Currently you need to
+Currently, you need to
 [include a header and declare a glue function](https://github.com/vlang/v/blob/c14c324/examples/sokol/02_cubes_glsl/cube_glsl.v#L43-L46)
 before using the shader in your code.
 
@@ -5177,10 +5177,10 @@ Package are up to date.
 5. Add your package to the public V package registry VPM:
    https://vpm.vlang.io/new
 
-   You will have to login with your Github account to register the package.
+   You will have to log in with your GitHub account to register the package.
    **Warning:** _Currently it is not possible to edit your entry after submitting.
-   Check your package name and github url twice as this cannot be changed by you later._
-6. The final package name is a combination of your github account and
+   Check your package name and GitHub url twice as this cannot be changed by you later._
+6. The final package name is a combination of your GitHub account and
    the package name you provided e.g. `mygithubname.mypackage`.
 
 **Optional:** tag your V package with `vlang` and `vlang-package` on github.com
@@ -5501,7 +5501,7 @@ it easier to change in external editor programs, without needing to recompile
 your executable.
 
 When you compile with `-prod`, the file *will be embedded inside* your
-executable, increasing your binary size, but making it more self contained
+executable, increasing your binary size, but making it more self-contained
 and thus easier to distribute. In this case, `embedded_file.data()` will cause *no IO*,
 and it will always return the same data.
 
@@ -5660,7 +5660,7 @@ With the example above:
 - when you compile for windows, you will get 'Hello windows'
 - when you compile for linux, you will get 'Hello linux'
 - when you compile for any other platform, you will get the
-  non specific 'Hello world' message.
+  nonspecific 'Hello world' message.
 
 - `_d_customflag.v` => will be used *only* if you pass `-d customflag` to V.
   That corresponds to `$if customflag ? {}`, but for a whole file, not just a
@@ -5993,7 +5993,7 @@ will hang &ndash; dependent on the compiler optimization used.)
 
 ## Global Variables
 
-By default V does not allow global variables. However, in low level applications they have their
+By default, V does not allow global variables. However, in low level applications they have their
 place so their usage can be enabled with the compiler flag `-enable-globals`.
 Declarations of global variables must be surrounded with a `__global ( ... )`
 specification &ndash; as in the example [above](#atomics).
@@ -6021,7 +6021,7 @@ fn init() {
 }
 ```
 
-Be aware that in multi threaded applications the access to global variables is subject
+Be aware that in multithreaded applications the access to global variables is subject
 to race conditions. There are several approaches to deal with these:
 
 - use `shared` types for the variable declarations and use `lock` blocks for access.
@@ -6031,7 +6031,7 @@ to race conditions. There are several approaches to deal with these:
   cannot really help in this case, so you have to know what you are doing.
 - don't care &ndash; this approach is possible but makes only sense if the exact values
   of global variables do not really matter. An example can be found in the `rand` module
-  where global variables are used to generate (non cryptographic) pseudo random numbers.
+  where global variables are used to generate (non-cryptographic) pseudo random numbers.
   In this case data races lead to random numbers in different threads becoming somewhat
   correlated, which is acceptable considering the performance penalty that using
   synchronization primitives would represent.
@@ -6130,7 +6130,7 @@ use `v help`, `v help build` and `v help build-c`.
 
 ### Native Backend binaries
 
-Currently there is no debugging support for binaries, created by the
+Currently, there is no debugging support for binaries, created by the
 native backend (flag: `-b native`).
 
 ### Javascript Backend
@@ -6320,7 +6320,7 @@ Module {
 > The @VMODROOT folder is also *prepended* to the module lookup path,
 > so you can *import* other modules under your @VMODROOT, by just naming them.
 
-The instructions above will make V look for an compiled .o file in
+The instructions above will make V look for a compiled .o file in
 your module `folder/c/implementation.o`.
 If V finds it, the .o file will get linked to the main executable, that used the module.
 If it does not find it, V assumes that there is a `@VMODROOT/c/implementation.c` file,
@@ -6410,7 +6410,7 @@ a parallel code structure.
 
 ### Export to shared library
 
-By default all V functions have the following naming scheme in C: `[module name]__[fn_name]`.
+By default, all V functions have the following naming scheme in C: `[module name]__[fn_name]`.
 
 For example, `fn foo() {}` in module `bar` will result in `bar__foo()`.
 
@@ -6424,7 +6424,7 @@ fn foo() {
 
 ### Translating C to V
 
-V can translate your C code to human readable V code, and generating V wrappers
+V can translate your C code to human-readable V code, and generating V wrappers
 on top of C libraries.
 
 C2V currently uses Clang's AST to generate V, so to translate a C file to V
@@ -6654,7 +6654,7 @@ to circumvent this rule and have a file with a fully custom name and shebang. Wh
 exists it is only recommended for specific usecases like scripts that will be put in the path and
 should **not** be used for things like build or deploy scripts. To access this feature start the
 file with `#!/usr/bin/env -S v -raw-vsh-tmp-prefix tmp` where `tmp` is the prefix for
-the built executable. This will run in crun mode so it will only rebuild if changes to the script
+the built executable. This will run in crun mode, so it will only rebuild if changes to the script
 were made and keep the binary as `tmp.<scriptfilename>`. **Caution**: if this filename already
 exists the file will be overridden. If you want to rebuild each time and not keep this binary
 instead use `#!/usr/bin/env -S v -raw-vsh-tmp-prefix tmp run`.

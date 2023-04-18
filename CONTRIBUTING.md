@@ -95,7 +95,7 @@ accordingly in the steps below.)
 5. When finished with a feature/bugfix/change, you can:
 `git checkout -b fix_alabala`
    - Don't forget to keep formatting standards, run `v fmt -w YOUR_MODIFIED_FILES` before committing
-6. `git push pullrequest` Note: The `pullrequest` remote was setup on step 4
+6. `git push pullrequest` Note: The `pullrequest` remote was set up on step 4
 
 7. On GitHub's web interface, go to: https://github.com/vlang/v/pulls
 
@@ -125,7 +125,7 @@ Git is very flexible, so there are other ways to accomplish the same thing.
 See the [GitHub flow](https://guides.github.com/introduction/git-handbook/#github), for more
 information.
 
-## Using Github's hub CLI tool
+## Using GitHub's hub CLI tool
 
 You can download the `hub` tool from https://hub.github.com/ . Using
 `hub`, you will not need to go through the (sometimes) slow website

@@ -12,7 +12,7 @@ may need to copy the .dll file: `thirdparty/mysql/lib/libmysql.dll`, into the fo
 of the executable too (it should be right next to the .exe file).
 
 This is a temporary workaround, until we have a more permanent solution, or at least
-more user friendly errors for that situation.
+more user-friendly errors for that situation.
 
 ## Basic Usage
 
